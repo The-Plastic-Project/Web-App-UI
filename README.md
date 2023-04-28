@@ -1,2 +1,3 @@
-# Web-App-UI
-A repository for the HTML content of our web app. Connected to Replit and AWS Amplify.
+## PlasticProjectUI
+
+This is a github repo for the UI elements of the Plastic Project app. See our main repo for all backend code.

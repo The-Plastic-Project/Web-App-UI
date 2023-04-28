@@ -1,0 +1,61 @@
+html {
+  height: 100%;
+  width: 100%;
+
+  /* Colors, reference with var(--...) */
+
+  /* branded */
+  --TPP-orange: #FF8221;
+  --TPP-brown: #773400;
+  --TPP-green: #016855;
+  --TPP-cream: #f2e5d9;
+  /*--TPP-header: Avenir Light;
+  --TPP-body: Questrial; */
+  
+  /* misc */
+  --text-black: #000000;
+  --text-white: #ffffff;
+  --menu: #b59e91;
+
+  
+}
+
+body {
+  background-color: var(--TPP-cream);
+}
+
+label {
+  color: var(--text-black);
+  font-family: 'Questrial', sans-serif;
+  font-size: 25px;
+  margin-left: 40px;
+}
+
+button {
+  color: var(--text-white);
+  font-family: 'Questrial', sans-serif;
+  font-size: 20px;
+  margin-left: 40px;
+  background-color: var(--menu);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+input {
+  color: var(--text-black);
+  font-family: 'Questrial', sans-serif;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+form {
+  margin-top: 60px;
+}
+
+
+
+
+
+
+
