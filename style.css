@@ -4,6 +4,11 @@ html {
 
   /* Colors, reference with var(--...) */
 
+  /* Figma */
+  --cream: #FAECE1;
+  --green1: #CCDDDA;
+  --green2: #7CAA9E;
+  
   /* branded */
   --TPP-orange: #FF8221;
   --TPP-brown: #773400;
@@ -21,7 +26,7 @@ html {
 }
 
 body {
-  background-color: var(--TPP-cream);
+  background-color: var(--cream);
 }
 
 label {
