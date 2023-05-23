@@ -9,15 +9,12 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap,wght@100..900');
-  </style>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </head>
 
 <body>
-  <nav class="navbar nav-justified fixed-bottom" style="background-color:#FAECE1; height:75px;">
-    <a class="nav-link" href="index.html" style="color: black; font-size: 10pt; margin-top: -15px;">
+  <nav class="navbar nav-justified fixed-bottom" style="background-color:#FAECE1; height:8%;">
+    <a class="nav-link" href="index.html" style="color: black; font-size: 10pt;">
       <div class="container">
         <div class="col">
           <div class="row">
@@ -29,7 +26,7 @@
         </div>
       </div>
     </a>
-    <a class="nav-link disabled" style="color: black; font-size: 10pt; margin-top: -15px;">
+    <a class="nav-link disabled" style="color: black; font-size: 10pt;">
       <div class="container">
         <div class="col">
           <div class="row">
@@ -41,7 +38,7 @@
         </div>
       </div>
     </a>
-    <a class="nav-link" href="local.html" style="color: black; font-size: 10pt; margin-top: -15px;">
+    <a class="nav-link" href="local.html" style="color: black; font-size: 10pt;">
       <div class="container">
         <div class="col">
           <div class="row">
@@ -54,9 +51,40 @@
       </div>
     </a>
   </nav>
-  </nav>
 
 
+  <div class="w-100" style="height: 60px; background-color: #faece1;"></div>
+
+  <main class="m-3" style="overflow-y: scroll;">
+    <h1 class="mb-3 fw-bold">Classify Waste Using Artifical Intelligence</h1>
+    <div class="mb-5 d-flex justify-content-center">
+      <div style="background-color: #faece1; width: 87.2%;">
+        <div style="height: 414px">
+          img here, this div is useless and can be removed, its just holding the height
+        </div>
+      </div>
+    </div>
+    <div class="mb-5 container">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <button class="btn" style="width: 76.9%; background-color: #CCDDDA;">Retake</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <button class="btn" style="width: 76.9%; background-color: #CCDDDA;">Process</button>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="p-3" style="background-color: #faece1; width: 87.2%;">
+        <h3>Identified As: Plastic Bottle</h3>
+        <p class="text-break">Check the underside of the bottle for a small recycling logo, and match the number inside with the instructions.</p>
+      </div>
+    </div>
+
+  </main>
+
+
+  <!--
   <main>
     <h1 class="visually-hidden">TensorFlow Demo</h1>
     <div class="px-4 py-5 my-5 text-center">
@@ -76,9 +104,9 @@
       </div>
     </div>
   </main>
-
-
+-->
   <script>
+    // classify image
     const img = document.getElementById('img');
     const results = document.getElementById('results');
     document.getElementById('fileInput').addEventListener("change", e => {
@@ -91,24 +119,24 @@
       reader.readAsDataURL(file);
       reader.onload = async (e) => {
         const base64 = e.target.result;
-        console.log(base64)
         img.setAttribute('src', base64);
-        const url = 'https://nox5awhbif.execute-api.us-west-1.amazonaws.com/dev';
+        const url = 'https://onklb0qxvc.execute-api.us-west-1.amazonaws.com/dev';
         const response = await fetch(url, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
           },
           redirect: 'follow',
+          referrerPolicy: 'no-referrer',
           body: JSON.stringify({file: base64})
         });
         const recognizedObject = await response.json();
-        const recognizedObjectJSON = JSON.parse(recognizedObject.body);
-        results.textContent = "Object recognized:" + recognizedObjectJSON
+        results.textContent = JSON.parse(recognizedObject.message)
         results.className = "alert alert-success";
       }
     });
   </script>
+
 </body>
 
 </html>
