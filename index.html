@@ -12,49 +12,19 @@
 </head>
 
 <body>
-  <nav class="navbar nav-justified fixed-bottom" style="background-color:#FAECE1; height:70px;">
-    <a class="nav-link disabled" style="color: black; font-size: 10pt; margin-top: -15px;">
-      <div class="container">
-        <div class="col">
-          <div class="row">
-            <iconify-icon icon="ic:baseline-home" width="full" height="50" style="color: black;"></iconify-icon>
-          </div>
-          <div class="row justify-content-center" style="margin-top: -5px;">
-            Home
-          </div>
-        </div>
-      </div>
-    </a>
-    <a class="nav-link" href="AI-demo.html" style="color: black; font-size: 10pt; margin-top: -15px;">
-      <div class="container">
-        <div class="col">
-          <div class="row">
-            <iconify-icon icon="mdi:orbit-variant" width="full" height="50" style="color: black;"></iconify-icon>
-          </div>
-          <div class="row justify-content-center" style="margin-top: -5px;">
-            Identify
-          </div>
-        </div>
-      </div>
-    </a>
-    <a class="nav-link" href="local.html" style="color: black; font-size: 10pt; margin-top: -15px;">
-      <div class="container">
-        <div class="col">
-          <div class="row">
-            <iconify-icon icon="mdi:shop-outline" width="full" height="50" style="color: black;"></iconify-icon>
-          </div>
-          <div class="row justify-content-center" style="margin-top: -5px;">
-            Shop
-          </div>
-        </div>
-      </div>
-    </a>
-  </nav>
+  <!-- Top Bar -->
+  <div class="w-100 fixed-top" style="height: 60px; background-color: #faece1;"></div>
+
 
   <main class="m-3">
 
+    <!-- Spacer -->
+    <div style="height:60px"></div>
+
+    <!-- Header -->
     <h1 class="mb-3 fw-bold">Business of the Day</h1>
 
+    <!-- Store  -->
     <div class="visually-hidden mb-5 p-0 rounded container"
       style="width: 92.3%; height: 23.7%; background-color: #faece1;">
       <div class="col">
@@ -73,54 +43,99 @@
       </div>
     </div>
 
+    <!-- Header -->
     <h1 class="mb-3 fw-bold">Daily Fun Fact</h1>
 
+    <!-- Fun Fact Bubble -->
     <div class="mb-5 d-flex justify-content-center rounded">
-      <div class="p-3" style="background-color: #CCDDDA; width: 92.3%;">
+      <div class="p-3" style="background-color: #CCDDDA; width: 92.3%; border-radius: 20px;">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies. Arcu non sodales neque
           sodales ut.</p>
         <div class="text-center">
-          <p class="fw-bold">Learn More</p>
+          <a href="https://www.youtube.com/watch?v=jfKfPfyJRdk" class="card-link fw-bold">Learn More</a>
         </div>
       </div>
     </div>
 
+    <!-- Contact Us Bubble -->
     <div class="d-flex justify-content-center">
-      <div class="p-3" style="background-color: #faece1; width: 92.3%;">
+      <div class="p-3" style="background-color: #faece1; width: 92.3%; border-radius: 20px;">
         <div class="containter">
           <div class="row">
-            <div class="col-6">
-              <h3>Contact Us:</h3>
+            <div class="col">
+              <h3 class="fw-bold">Contact Us:</h3>
             </div>
             <div class="col">
-              <a class="card-link" href="https://instagram.com/the_plastic_project._?igshid=Zjc2ZTc4Nzk=">
-                <iconify-icon icon="skill-icons:instagram" width="full" height="50"></iconify-icon>
-              </a>
-            </div>
-            <div class="col">
-              <a class="card-link" href="https://discord.gg/4kqa5Qhd">
-                <iconify-icon icon="logos:discord-icon" width="full" height="50"></iconify-icon>
-              </a>
+              <div class="row">
+                <div class="col">
+                  <a class="card-link" href="https://instagram.com/the_plastic_project._?igshid=Zjc2ZTc4Nzk=">
+                    <iconify-icon icon="skill-icons:instagram" width="full" height="50"></iconify-icon>
+                  </a>
+                </div>
+                <div class="col">
+                  <a class="card-link" href="https://discord.gg/4kqa5Qhd">
+                    <iconify-icon icon="logos:discord-icon" width="full" height="50"></iconify-icon>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="row text-center">
             <a href="https://www.theplasticproject.org/" class="card-link">https://www.theplasticproject.org/</a>
           </div>
         </div>
-
-
-
       </div>
     </div>
 
-
-
-
-
-
   </main>
 
+  <!-- Nav Bar -->
+  <nav class="navbar nav-justified fixed-bottom" style="background-color:#FAECE1; height:8%;">
+    <a class="nav-link disabled" style="color: black; font-size: 10pt; margin-top: -15px;">
+      <div class="container">
+        <div class="col">
+          <div class="row justify-content-center">
+            <div>
+              <iconify-icon icon="ic:baseline-home" width="50" style="color: black;">
+              </iconify-icon>
+            </div>
+          </div>
+          <div class="row justify-content-center" style="margin-top: -10px;">
+            Home
+          </div>
+        </div>
+      </div>
+    </a>
+    <a class="nav-link" href="AI-demo.html" style="color: black; font-size: 10pt; margin-top: -15px;">
+      <div class="container">
+        <div class="col">
+          <div class="row justify-content-center">
+            <div>
+              <iconify-icon icon="mdi:orbit-variant" width="50" style="color: black;"></iconify-icon>
+            </div>
+          </div>
+          <div class="row justify-content-center" style="margin-top: -10px;">
+            Identify
+          </div>
+        </div>
+      </div>
+    </a>
+    <a class="nav-link" href="local.html" style="color: black; font-size: 10pt; margin-top: -15px;">
+      <div class="container">
+        <div class="col">
+          <div class="row justify-content-center">
+            <div>
+              <iconify-icon icon="mdi:shop-outline" width="50" style="color: black;"></iconify-icon>
+            </div>
+          </div>
+          <div class="row justify-content-center" style="margin-top: -10px;">
+            Shop
+          </div>
+        </div>
+      </div>
+    </a>
+  </nav>
 
 </body>
 
