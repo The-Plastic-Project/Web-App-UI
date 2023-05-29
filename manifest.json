@@ -4,8 +4,8 @@
     "short_name": "The Plastic Project",
     "description": "A tool to classify waste and learn about local eco-friendly opportunities",
     "start_url": "/",
-    "background_color": "#faece1",
-    "theme_color": "#7caa9e",
+    "background_color": "#7caa9e",
+    "theme_color": "#faece1",
     "orientation": "any",
     "display": "standalone",
     "icons": [
