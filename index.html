@@ -9,6 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  <link rel="manifest" href="/manifest.json" />
+
 </head>
 
 <body>
@@ -25,11 +27,13 @@
     <h1 class="mb-3 fw-bold">Business of the Day</h1>
 
     <!-- Store  -->
-    <div class="mb-5 p-0 container" style="width: 92.3%; height: 23.7%; background-color: #faece1; border-radius: 20px;">
+    <div class="mb-5 p-0 container"
+      style="width: 92.3%; height: 23.7%; background-color: #faece1; border-radius: 20px;">
       <div class="row">
-        <div class="col" >
+        <div class="col">
           <div>
-            <img class="float-left img-fluid" src="coffee img.png" style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
+            <img class="float-left img-fluid" src="coffee img.png"
+              style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
           </div>
         </div>
         <div class="col">
@@ -42,7 +46,8 @@
             <p class="text-center fs-6" style="padding-right: 16px;">Eco friendly coffee, born in Seattle, Wa.</p>
           </div>
           <div class="row">
-            <p class="text-center fs-5 fw-bold" style="padding-right: 16px;"><a class="link" href="https://www.caffevita.com/">Learn More</a></p>
+            <p class="text-center fs-5 fw-bold" style="padding-right: 16px;"><a class="link"
+                href="https://www.caffevita.com/">Learn More</a></p>
           </div>
         </div>
       </div>
@@ -96,51 +101,50 @@
   </main>
 
   <!-- Nav Bar -->
-  <nav class="navbar nav-justified fixed-bottom" style="background-color:#FAECE1; height:8%;">
-    <a class="nav-link disabled" style="color: black; font-size: 10pt; margin-top: -15px;">
+  <nav class="navbar nav-justified fixed-bottom" id="navbar">
+    <a class="nav-link" href="index.html" style="color:black">
       <div class="container">
         <div class="col">
-          <div class="row justify-content-center">
-            <div>
-              <iconify-icon icon="ic:baseline-home" width="50" style="color: black;">
-              </iconify-icon>
-            </div>
+          <div class="row">
+            <iconify-icon icon="ic:baseline-home" width="full" height="45" style="color: black;"></iconify-icon>
           </div>
-          <div class="row justify-content-center" style="margin-top: -10px;">
+          <div class="row justify-content-center">
             Home
           </div>
         </div>
       </div>
     </a>
-    <a class="nav-link" href="AI-demo.html" style="color: black; font-size: 10pt; margin-top: -15px;">
+    <a class="nav-link" href="AI-demo.html" style="color:black">
       <div class="container">
         <div class="col">
-          <div class="row justify-content-center">
-            <div>
-              <iconify-icon icon="mdi:orbit-variant" width="50" style="color: black;"></iconify-icon>
-            </div>
+          <div class="row">
+            <iconify-icon icon="mdi:orbit-variant" width="full" height="45" style="color: black;"></iconify-icon>
           </div>
-          <div class="row justify-content-center" style="margin-top: -10px;">
+          <div class="row justify-content-center">
             Identify
           </div>
         </div>
       </div>
     </a>
-    <a class="nav-link" href="local.html" style="color: black; font-size: 10pt; margin-top: -15px;">
+    <a class="nav-link" href="local.html" style="color:black">
       <div class="container">
         <div class="col">
-          <div class="row justify-content-center">
-            <div>
-              <iconify-icon icon="mdi:shop-outline" width="50" style="color: black;"></iconify-icon>
-            </div>
+          <div class="row">
+            <iconify-icon icon="mdi:shop-outline" width="full" height="45" style="color: black;"></iconify-icon>
           </div>
-          <div class="row justify-content-center" style="margin-top: -10px;">
+          <div class="row justify-content-center">
             Shop
           </div>
         </div>
       </div>
     </a>
   </nav>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', {scope: '/'});
+    }
+  </script>
 
 </body>
 

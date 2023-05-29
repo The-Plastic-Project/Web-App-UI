@@ -13,12 +13,12 @@
 </head>
 
 <body>
-  <nav class="navbar nav-justified fixed-bottom" style="background-color:#FAECE1; height:8%;">
-    <a class="nav-link" href="index.html" style="color: black; font-size: 10pt;">
+  <nav class="navbar nav-justified fixed-bottom" id="navbar">
+    <a class="nav-link" href="index.html" style="color:black">
       <div class="container">
         <div class="col">
           <div class="row">
-            <iconify-icon icon="ic:outline-home" width="full" height="50" style="color: black;"></iconify-icon>
+            <iconify-icon icon="ic:outline-home" width="full" height="45" style="color: black;"></iconify-icon>
           </div>
           <div class="row justify-content-center">
             Home
@@ -26,11 +26,11 @@
         </div>
       </div>
     </a>
-    <a class="nav-link disabled" style="color: black; font-size: 10pt;">
+    <a class="nav-link disabled" style="color:black">
       <div class="container">
         <div class="col">
           <div class="row">
-            <iconify-icon icon="mdi:orbit-variant" width="full" height="50" style="color: black;"></iconify-icon>
+            <iconify-icon icon="mdi:orbit-variant" width="full" height="45" style="color: black;"></iconify-icon>
           </div>
           <div class="row justify-content-center">
             Identify
@@ -38,11 +38,11 @@
         </div>
       </div>
     </a>
-    <a class="nav-link" href="local.html" style="color: black; font-size: 10pt;">
+    <a class="nav-link" href="local.html" style="color:black">
       <div class="container">
         <div class="col">
           <div class="row">
-            <iconify-icon icon="mdi:shop-outline" width="full" height="50" style="color: black;"></iconify-icon>
+            <iconify-icon icon="mdi:shop-outline" width="full" height="45" style="color: black;"></iconify-icon>
           </div>
           <div class="row justify-content-center">
             Shop
@@ -52,73 +52,81 @@
     </a>
   </nav>
 
-
   <div class="w-100 fixed-top" style="height: 60px; background-color: #faece1;"></div>
 
-  <main class="m-3">
-    <div style="height:60px"></div>
-    <h1 class="mb-3 fw-bold">Classify Waste Using Artifical Intelligence</h1>
-    <div class="mb-5 d-flex justify-content-center">
-      <div style="background-color: #faece1; width: 87.2%;">
-        <div style="height: 414px">
-          img here, this div is useless and can be removed, its just holding the height
-        </div>
-      </div>
-    </div>
-    <div class="mb-5 container">
-      <div class="row">
-        <div class="col d-flex justify-content-center">
-          <button class="btn" style="width: 76.9%; background-color: #CCDDDA;">Retake</button>
-        </div>
-        <div class="col d-flex justify-content-center">
-          <button class="btn" style="width: 76.9%; background-color: #CCDDDA;">Process</button>
-        </div>
-      </div>
-    </div>
-    <div class="d-flex justify-content-center">
-      <div class="p-3" style="background-color: #faece1; width: 87.2%;">
-        <h3>Identified As: Plastic Bottle</h3>
-        <p class="text-break">Check the underside of the bottle for a small recycling logo, and match the number inside with the instructions. Check the underside of the bottle for a small recycling logo, and match the number inside with the instructions. Check the underside of the bottle for a small recycling logo, and match the number inside with the instructions. Check the underside of the bottle for a small recycling logo, and match the number inside with the instructions.
-          
-          text to show scrolling functionality. </p>
-      </div>
-    </div>
+  <div id="content">
 
-    <div style="height: 100px"></div>
-
-  </main>
-
-
-  <!--
-  <main>
-    <h1 class="visually-hidden">TensorFlow Demo</h1>
-    <div class="px-4 py-5 my-5 text-center">
-      <h1 class="display-5 fw-bold">TensorFlow Demo</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">This is a TensorFlow demo</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Please select a image</label>
-            <input class="form-control" type="file" id="fileInput">
-            <div id="results" class="alert alert-info" role="alert" style="margin-top: 1rem; visibility: hidden;">
-              Recognizing...
-            </div>
-            <img id="img" class="img-fluid" src="" />
+    <main class="m-3">
+      <div style="height:60px"></div>
+      <h1 class="mb-3 fw-bold" style="text-align:center">Classify Waste Using Artifical Intelligence</h1>
+      <div class="mb-5 d-flex justify-content-center" id="picture-div">
+        <div style=" background-color: #faece1; width: 87.2%;border-radius: 25px;">
+          <div style="height: 320px">
+            <img id="img" class="img-fluid" style="height: 320px" src="" />
           </div>
         </div>
       </div>
-    </div>
-  </main>
--->
+      <div class="mb-5 container">
+        <div class="row" style="margin-top: -20px; margin-bottom:-20px">
+          <div class="col d-flex justify-content-center">
+            <button class="btn" style="width: 300px; background-color: #CCDDDA; border-radius: 9px;"
+              onclick="HandleBrowseClick()" ;>Upload Image</button>
+
+          </div>
+        </div>
+      </div>
+
+      <input type="file" (change)="getFile($event)" id="fileInput" name="image" accept="image/*" capture="environment">
+
+      <div class="d-flex justify-content-center" id="results-div">
+        <div class="p-3" style="background-color: #faece1; width: 87.2%; border-radius: 25px;">
+          <h3 id="result" role="alert">Identified As: Plastic Bottle</h3>
+          <p id="results-detailed" class="text-break" role="alert" style="margin-top: 1rem; visibility: hidden;">
+            Recognizing...
+          </p>
+        </div>
+      </div>
+
+
+      <div class="d-flex justify-content-center" id="info-div">
+        <div class="p-3"
+          style="background-color: #faece1; width: 87.2%; border-radius: 25px; margin-top: 30px; margin-bottom: 30px">
+          <h3>A note on usage</h3>
+          <p class="text-break">In most cities, garbage is not sorted after it is picked up. Also, just because a
+            product
+            has a recycle symbol does NOT mean that it can always be recycled. Be sure to clean waste that goes into the
+            recycling first. Most rules here apply in all cities, but sometimes more metal products can be recycled, so
+            check the conditions for your city.</p>
+        </div>
+      </div>
+  </div>
+
   <script>
+
+    var is_mobile = !!navigator.userAgent.match(/iphone|android|blackberry/ig) || false;
+
+    if (!is_mobile) {
+      const content = document.getElementById('content');
+      content.setAttribute("style", "width:60%; margin: auto;")
+    }
+
+    // handle click
+    function HandleBrowseClick() {
+      var fileinput = document.getElementById("fileInput");
+      fileinput.click();
+    }
+
+    // hide things
+    document.getElementById('picture-div').style.display = "none";
+
     // classify image
     const img = document.getElementById('img');
-    const results = document.getElementById('results');
+    const result = document.getElementById('result');
+    const results_detailed = document.getElementById('results-detailed');
     document.getElementById('fileInput').addEventListener("change", e => {
-      results.style.visibility = 'visible';
-      results.textContent = 'Recognizing...';
-      results.className = "alert alert-info";
-      results.scrollIntoView();
+      result.style.visibility = 'visible';
+      result.textContent = 'Recognizing...';
+      result.scrollIntoView();
       const file = e.target.files[0];
       const reader = new FileReader();
       reader.readAsDataURL(file);
@@ -136,11 +144,14 @@
           body: JSON.stringify({file: base64})
         });
         const recognizedObject = await response.json();
-        results.textContent = JSON.parse(recognizedObject.message)
-        results.className = "alert alert-success";
+        result.textContent = "Identified as: " + JSON.parse(recognizedObject.result)
+        results_detailed.style.visibility = 'visible';
+        results_detailed.textContent = JSON.parse(recognizedObject.message)
       }
     });
   </script>
+
+  <div style="height: 100px"></div>
 
 </body>
 

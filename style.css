@@ -58,6 +58,20 @@ form {
   margin-top: 60px;
 }
 
+input[type=file] {
+  display: none
+}
+
+nav {
+  background-color: #FAECE1;
+  height: 12%;
+  text-align: center
+}
+
+nav a {
+  color: black; 
+  font-size: 10pt;
+}
 
 
 
