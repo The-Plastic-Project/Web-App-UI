@@ -7,8 +7,10 @@ self.addEventListener('install', event => {
     cache.addAll([
       '/',
       '/style.css',
+      '/index.html',
       '/local.html',
       '/AI-demo.html',
+      '/manifest.json',
       '/cafee vita logo.png',
       '/cofee img.png',
     ]);
