@@ -5,7 +5,7 @@
     "description": "A tool to classify waste and learn about local eco-friendly opportunities",
     "start_url": "/",
     "background_color": "#faece1",
-    "theme_color": "#7caa9e"
+    "theme_color": "#7caa9e",
     "orientation": "any",
     "display": "standalone",
     "icons": [
