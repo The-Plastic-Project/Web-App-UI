@@ -73,8 +73,22 @@ nav a {
   font-size: 10pt;
 }
 
+nav row {
+  width: auto;
+  margin: auto;
+}
 
+hide-before-res {
+  background-color: red;
+  display: none;
+  visibility: hidden;
+}
 
-
-
-
+#upload-btn {
+  height: 100px;
+  width: 230px;
+  margin-top: 60px;
+  background-color: #CCDDDA; 
+  border-radius: 9px;
+  font-size: 15pt;
+}

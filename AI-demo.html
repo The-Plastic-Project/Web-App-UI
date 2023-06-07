@@ -15,7 +15,7 @@
 
 <body>
   <nav class="navbar nav-justified fixed-bottom" id="navbar">
-    <a class="nav-link" href="index.html" style="color:black">
+    <a class="nav-link" href="/index.html" style="color:black">
       <div class="container">
         <div class="col">
           <div class="row">
@@ -53,53 +53,51 @@
     </a>
   </nav>
 
-  <div class="w-100 fixed-top" style="height: 60px; background-color: #faece1;"></div>
 
   <div id="content">
 
     <main class="m-3">
       <div style="height:60px"></div>
       <h1 class="mb-3 fw-bold" style="text-align:center">Classify Waste Using Artifical Intelligence</h1>
-      <div class="mb-5 d-flex justify-content-center" id="picture-div">
-        <div style=" background-color: #faece1; width: 87.2%;border-radius: 25px;">
-          <div style="height: 320px">
-            <img id="img" class="img-fluid" style="height: 320px" src="" />
+      <div class="mb-5 d-flex justify-content-center hide-before-res">
+        <div style=" width: 87.2%; border-radius: 40px; text-align: center;" id="picture-div">
+          <div style="height: 30%; margin-bottom: -200px; margin-top: 5%">
+            <img id="img" class="img-fluid" src="" />
           </div>
         </div>
       </div>
       <div class="mb-5 container">
-        <div class="row" style="margin-top: -20px; margin-bottom:-20px">
-          <div class="col d-flex justify-content-center">
-            <button class="btn" style="width: 300px; background-color: #CCDDDA; border-radius: 9px;"
-              onclick="HandleBrowseClick()" ;>Upload Image</button>
+        <div class="row"">
+          <div class=" col d-flex justify-content-center">
+          <button class="btn" id="upload-btn" onclick="HandleBrowseClick()" ;>Upload Image</button>
 
-          </div>
         </div>
       </div>
+  </div>
 
-      <input type="file" (change)="getFile($event)" id="fileInput" name="image" accept="image/*" capture="environment">
+  <input type="file" (change)="getFile($event)" id="fileInput" name="image" accept="image/*" capture="environment">
 
-      <div class="d-flex justify-content-center" id="results-div">
-        <div class="p-3" style="background-color: #faece1; width: 87.2%; border-radius: 25px;">
-          <h3 id="result" role="alert">Identified As: Plastic Bottle</h3>
-          <p id="results-detailed" class="text-break" role="alert" style="margin-top: 1rem; visibility: hidden;">
-            Recognizing...
-          </p>
-        </div>
-      </div>
+  <div class="d-flex justify-content-center hide-before-res" id="results-div">
+    <div class="p-3" style="background-color: #faece1; width: 87.2%; border-radius: 25px;" id="results-div">
+      <h3 id="result" role="alert">Identified As: Plastic Bottle</h3>
+      <p id="results-detailed" class="text-break" role="alert" style="margin-top: 1rem; visibility: hidden;">
+        Recognizing...
+      </p>
+    </div>
+  </div>
 
 
-      <div class="d-flex justify-content-center" id="info-div">
-        <div class="p-3"
-          style="background-color: #faece1; width: 87.2%; border-radius: 25px; margin-top: 30px; margin-bottom: 30px">
-          <h3>A note on usage</h3>
-          <p class="text-break">In most cities, garbage is not sorted after it is picked up. Also, just because a
-            product
-            has a recycle symbol does NOT mean that it can always be recycled. Be sure to clean waste that goes into the
-            recycling first. Most rules here apply in all cities, but sometimes more metal products can be recycled, so
-            check the conditions for your city.</p>
-        </div>
-      </div>
+  <div class="d-flex justify-content-center" id="info-div">
+    <div class="p-3" id="note-div"
+      style="background-color: #faece1; width: 87.2%; border-radius: 25px; margin-top: 30px; margin-bottom: 30px">
+      <h3>A note on usage</h3>
+      <p class="text-break">In most cities, garbage is not sorted after it is picked up. Also, just because a
+        product
+        has a recycle symbol does NOT mean that it can always be recycled. Be sure to clean waste that goes into the
+        recycling. Most rules here apply in all cities, but sometimes more metal products can be recycled, so
+        check the conditions for your city.</p>
+    </div>
+  </div>
   </div>
 
   <script>
@@ -108,8 +106,14 @@
 
     if (!is_mobile) {
       const content = document.getElementById('content');
+      console.log("RECOGNIZED")
       content.setAttribute("style", "width:60%; margin: auto;")
     }
+
+    document.getElementById('results-div').style.visibility = 'hidden'
+    document.getElementById('picture-div').style.visibility = 'hidden'
+    document.getElementById('note-div').style.visibility = 'hidden'
+
 
     // handle click
     function HandleBrowseClick() {
@@ -117,16 +121,19 @@
       fileinput.click();
     }
 
-    // hide things
-    document.getElementById('picture-div').style.display = "none";
-
     // classify image
     const img = document.getElementById('img');
     const result = document.getElementById('result');
     const results_detailed = document.getElementById('results-detailed');
     document.getElementById('fileInput').addEventListener("change", e => {
+      document.getElementById('results-div').style.visibility = 'visible'
+      document.getElementById('picture-div').style.visibility = 'visible'
+      document.getElementById('note-div').style.visibility = 'visible'
+      document.getElementById('upload-btn').style.visibility = 'hidden'
       result.style.visibility = 'visible';
       result.textContent = 'Recognizing...';
+      results_detailed.style.visibility = 'visible';
+      results_detailed.textContent = 'Information on how to proceed with your product will appear here.'
       result.scrollIntoView();
       const file = e.target.files[0];
       const reader = new FileReader();
@@ -146,7 +153,6 @@
         });
         const recognizedObject = await response.json();
         result.textContent = "Identified as: " + JSON.parse(recognizedObject.result)
-        results_detailed.style.visibility = 'visible';
         results_detailed.textContent = JSON.parse(recognizedObject.message)
       }
     });
