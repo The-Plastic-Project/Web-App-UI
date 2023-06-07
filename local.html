@@ -15,12 +15,10 @@
 
 <body>
   <nav class="navbar nav-justified fixed-bottom" id="navbar">
-    <a class="nav-link" href="/index.html" style="color:black">
+    <a class="nav-link" href="index.html" style="color:black">
       <div class="container">
         <div class="col">
-          <div class="row">
-            <iconify-icon icon="ic:outline-home" width="full" height="45" style="color: black;"></iconify-icon>
-          </div>
+          <iconify-icon icon="ic:outline-home" width="full" height="45" style="color: black;"></iconify-icon>
           <div class="row justify-content-center">
             Home
           </div>
@@ -30,9 +28,7 @@
     <a class="nav-link" href="AI-demo.html" style="color:black">
       <div class="container">
         <div class="col">
-          <div class="row">
-            <iconify-icon icon="mdi:orbit-variant" width="full" height="45" style="color: black;"></iconify-icon>
-          </div>
+          <iconify-icon icon="mdi:orbit-variant" width="full" height="45" style="color: black;"></iconify-icon>
           <div class="row justify-content-center">
             Identify
           </div>
@@ -42,9 +38,7 @@
     <a class="nav-link" href="local.html" style="color:black">
       <div class="container">
         <div class="col">
-          <div class="row">
-            <iconify-icon icon="mdi:shop" width="full" height="45" style="color: black;"></iconify-icon>
-          </div>
+          <iconify-icon icon="mdi:shop" width="full" height="45" style="color: black;"></iconify-icon>
           <div class="row justify-content-center">
             Shop
           </div>
@@ -53,26 +47,51 @@
     </a>
   </nav>
 
-  <main>
-    <div class="d-flex justify-content-center">
-      <div class="m-3 p-0 rounded container"
-        style="width: 92.3%; height: 80%; background-color: #faece1; border-radius:200px">
+
+  <main class="m-5">
+    <div id="content">
+      
+      <div class="mb-5 p-0 container"
+        style="width: 92.3%; height: 23.7%; background-color: #faece1; border-radius: 20px;">
         <div class="col">
-          <img class="float-start rounded-start" src="coffee img.png" width=300>
-        </div>
-        <div class="col>
-          <div class=" row mt-2 mb-2">
-          <img src="caffe vita logo.png" heig <div class="row">
-          <p class="text-center fs-6">Eco friendly coffee, born in Seattle, Wa.</p>
+          <div>
+            <img class="float-left img-fluid" src="coffee img.png"
+              style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
+          </div>
+          <div class="col">
+            <div class="row mt-2 mb-2">
+              <div>
+                <img class="float-left img-fluid" src="caffe vita logo.png" style="padding-right: 16px;">
+              </div>
+            </div>
+
+            <p class="text-center fs-6" style="padding-right: 16px;">Eco friendly coffee, born in Seattle, Wa.</p>
+
+
+            <p class="text-center fs-5 fw-bold" style="padding-right: 16px;"><a class="link"
+                href="https://www.caffevita.com/">Learn More</a></p>
+
+          </div>
         </div>
       </div>
-      <div class="row">
-        <p class="text-center fs-5 fw-bold"><a class="link" href="https://www.caffevita.com/">Learn More</a></p>
-      </div>
-    </div>
-    </div>
+      
     </div>
   </main>
+
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', {scope: '/'});
+    }
+
+    var is_mobile = !!navigator.userAgent.match(/iphone|android|blackberry/ig) || false;
+
+    if (!is_mobile) {
+      const content = document.getElementById('content');
+      content.setAttribute("style", "width:60%; margin: auto;")
+    }
+  </script>
 
 </body>
 
