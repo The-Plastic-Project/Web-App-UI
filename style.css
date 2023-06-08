@@ -92,3 +92,43 @@ hide-before-res {
   border-radius: 9px;
   font-size: 15pt;
 }
+
+#picture-div {
+  height: 30%; 
+  border-radius: 25px; 
+  text-align: center; 
+  width: 60%;
+}
+
+#image-bg-div {
+  margin-bottom: -200px;
+  margin-top: 5%;
+  background-color: #faece1;
+  border-radius: 25px;
+  padding: 15px;
+  width: 100%;
+}
+
+#img {
+  border-radius: 25px;
+  border: 1px solid (0,0,0,0.8);
+  width: 100%;
+}
+
+.shop-col-1 {
+  width: 40%
+}
+
+.shop-col-2 {
+  width: 60%
+}
+
+@media (max-width: 800px) {
+  .shop-col-1 {
+    width: 60%
+  }
+  
+  .shop-col-2 {
+    width: 40%
+  }
+}
