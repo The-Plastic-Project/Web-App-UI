@@ -47,6 +47,10 @@ button {
   padding: 10px;
 }
 
+li {
+  list-style-type: none;
+}
+
 input {
   color: var(--text-black);
   font-family: 'Questrial', sans-serif;
@@ -132,3 +136,26 @@ hide-before-res {
     width: 40%
   }
 }
+
+#searchbar{
+     margin-left: 0%;
+     padding:15px;
+     border-radius: 10px;
+   }
+ 
+   input[type=text] {
+      width: 100%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+      
+   }
+ 
+   /* When the input field gets focus,
+        change its width to 100% */
+   input[type=text]:focus {
+     width: 100%;
+   }
+ 
+  #list{
+    padding: 0px;
+   }

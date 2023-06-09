@@ -14,6 +14,10 @@
 </head>
 
 <body>
+
+
+
+
   <!-- Nav Bar -->
   <nav class="navbar nav-justified fixed-bottom" id="navbar" style="padding-top:0">
     <a class="nav-link" href="/index.html" style="color: black;">
@@ -54,118 +58,137 @@
       <!-- Header -->
       <h1 class="mb-3 fw-bold" style="text-align:center">Explore eco-friendly businesses near you</h1>
 
-      <!-- Store  -->
-      <div class="mb-5 d-flex justify-content-center">
-        <div class="p-0 container"
-          style="width: 100%; height: 20%; background-color: #faece1; border-radius: 20px; max-width: 100%;">
-          <div class="row">
-            <div style="width:50%">
+      <!-- input tag -->
+      <input id="searchbar" onkeyup="search_animal()" type="text" name="search" placeholder="Search stores..." class="mb-5">
 
-              <img class="float-left img-fluid" src="coffee img.png"
-                style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
-            </div>
-            <div style="width:50%">
-              <div class="row mt-2 mb-2" style="padding-right: 20px; padding-top: 10px">
-                <div>
-                  <img class="mx-auto d-block img-fluid" src="caffe vita logo.png" style="border-radius: 30px;">
+      
+      <ul id="list">
+
+        <!-- Sorting -->
+        <li class="store" data-name="Caffe Vita">
+          
+          <!-- Store  -->
+          <div class="mb-5 d-flex justify-content-center">
+            <div class="p-0 container"
+              style="width: 100%; height: 20%; background-color: #faece1; border-radius: 20px; max-width: 100%;">
+              <div class="row">
+                <div style="width:50%">
+                  <img class="float-left img-fluid" src="coffee img.png"
+                    style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
                 </div>
-              </div>
-              <div class="row" style="padding-right: 20px;">
-                <p class="text-center hide-when-small">Eco friendly coffee, born in Seattle, Wa.</p>
-              </div>
-              <div class="row" style="padding-right: 20px;">
-                <p class="text-center fw-bold""><a class=" link" href="https://www.caffevita.com/">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Store  -->
-      <div class="mb-5 d-flex justify-content-center">
-        <div class="p-0 container"
-          style="width: 92.3%; height: 23.7%; background-color: #faece1; border-radius: 20px; max-width: 100%;">
-          <div class="row">
-            <div class="col-auto">
-              <div>
-                <img class="float-left img-fluid" src="coffee img.png"
-                  style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
-              </div>
-            </div>
-            <div class="col">
-              <div class="row mt-2 mb-2" style="padding-right: 20px; padding-left: 20px;">
-                <div>
-                  <img class="mx-auto d-block img-fluid" src="caffe vita logo.png" style="border-radius: 30px;">
-                </div>
-              </div>
-              <div class="row" style="padding-right: 5px;">
-                <p class="text-center">Eco friendly coffee, born in Seattle, Wa.</p>
-              </div>
-              <div class="row" style="padding-right: 5px;">
-                <p class="text-center fw-bold""><a class=" link" href="https://www.caffevita.com/">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Request Bubble -->
-      <div class="mb-5 d-flex justify-content-center">
-        <div class="p-3" style="background-color: #CCDDDA; width: 92.3%; border-radius: 20px;">
-          <div class="containter">
-            <div class="row">
-              <div class="col-6 d-flex align-items-center">
-                <p style="margin-bottom: 0px;">Want to highlight your favorite local businesses?</p>
-              </div>
-              <div class="col d-flex align-items-center justify-content-center">
-                <a class="card-link" href="https://www.google.com/forms/about/">
-                  <div class="p-3 d-flex align-items-center justify-content-center"
-                    style="background-color: #7CAA9E; border-radius: 20px;">
-                    <p class="fw-bold" style=" margin-bottom: 0px;">Make a request</p>
+                <div style="width:50%">
+                  <div class="row mt-2 mb-2" style="padding-right: 20px; padding-top: 10px">
+                    <div>
+                      <img class="mx-auto d-block img-fluid" src="caffe vita logo.png" style="border-radius: 30px;">
+                    </div>
                   </div>
-                </a>
+                  <div class="row" style="padding-right: 20px;">
+                    <p class="text-center hide-when-small">Eco friendly coffee, born in Seattle, Wa.</p>
+                  </div>
+                  <div class="row" style="padding-right: 20px;">
+                    <p class="text-center fw-bold""><a class=" link" href="https://www.caffevita.com/">Learn More</a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          
+        </li>
 
-        </div>
-      </div>
-
-
-      <!-- Store  -->
-      <div class="mb-5 d-flex justify-content-center">
-        <div class="p-0 container"
-          style="width: 92.3%; height: 23.7%; background-color: #faece1; border-radius: 20px; max-width: 100%;">
-          <div class="col-auto">
-            <div>
-              <img class="float-left img-fluid" src="coffee img.png"
-                style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
-            </div>
-          </div>
-          <div class="col">
-            <div class="row mt-2 mb-2" style="padding-right: 20px; padding-left: 20px;">
-              <div>
-                <img class="mx-auto d-block img-fluid" src="caffe vita logo.png" style="border-radius: 30px;">
+        <!-- Sorting -->
+        <li class="store" data-name="Bluegrass Havana">
+          
+          <!-- Store  -->
+          <div class="mb-5 d-flex justify-content-center">
+            <div class="p-0 container"
+              style="width: 100%; height: 20%; background-color: #faece1; border-radius: 20px; max-width: 100%;">
+              <div class="row">
+                <div style="width:50%">
+                  <img class="float-left img-fluid" src="coffee img.png"
+                    style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
+                </div>
+                <div style="width:50%">
+                  <div class="row mt-2 mb-2" style="padding-right: 20px; padding-top: 10px">
+                    <div>
+                      <img class="mx-auto d-block img-fluid" src="caffe vita logo.png" style="border-radius: 30px;">
+                    </div>
+                  </div>
+                  <div class="row" style="padding-right: 20px;">
+                    <p class="text-center hide-when-small">Eco friendly coffee, born in Seattle, Wa. Bluegrass Havana</p>
+                  </div>
+                  <div class="row" style="padding-right: 20px;">
+                    <p class="text-center fw-bold""><a class=" link" href="https://www.caffevita.com/">Learn More</a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="row" style="padding-right: 5px;">
-              <p class="text-center">Eco friendly coffee, born in Seattle, Wa.</p>
+          </div>
+          
+        </li>
+
+        <!-- Request Bubble -->
+        <div class="mb-5 d-flex justify-content-center">
+          <div class="p-3" style="background-color: #CCDDDA; width: 100%; border-radius: 20px;">
+            <div class="containter">
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <p style="margin-bottom: 0px;">Want to highlight your favorite local businesses?</p>
+                </div>
+                <div class="col d-flex align-items-center justify-content-center">
+                  <a class="card-link" href="https://www.google.com/forms/about/">
+                    <div class="p-3 d-flex align-items-center justify-content-center"
+                      style="background-color: #7CAA9E; border-radius: 20px;">
+                      <p class="fw-bold" style=" margin-bottom: 0px;">Make a request</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="row" style="padding-right: 5px;">
-              <p class="text-center fw-bold"><a class="link" href="https://www.caffevita.com/">Learn More</a></p>
-            </div>
+
           </div>
         </div>
-      </div>
 
 
+        <!-- Sorting -->
+        <li class="store" data-name="Tokyo, Japan">
+
+          <!-- Store  -->
+          <div class="mb-5 d-flex justify-content-center">
+            <div class="p-0 container"
+              style="width: 100%; height: 20%; background-color: #faece1; border-radius: 20px; max-width: 100%;">
+              <div class="row">
+                <div style="width:50%">
+                  <img class="float-left img-fluid" src="coffee img.png"
+                    style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
+                </div>
+                <div style="width:50%">
+                  <div class="row mt-2 mb-2" style="padding-right: 20px; padding-top: 10px">
+                    <div>
+                      <img class="mx-auto d-block img-fluid" src="caffe vita logo.png" style="border-radius: 30px;">
+                    </div>
+                  </div>
+                  <div class="row" style="padding-right: 20px;">
+                    <p class="text-center hide-when-small">Eco friendly coffee, born in Seattle, Wa. Tokyo, Japan</p>
+                  </div>
+                  <div class="row" style="padding-right: 20px;">
+                    <p class="text-center fw-bold""><a class=" link" href="https://www.caffevita.com/">Learn More</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </li>
+
+      </ul>
       <!-- Random Spacer -->
       <div style="height: 200px;"></div>
 
     </div>
   </main>
-
-
 
   <script>
     if ('serviceWorker' in navigator) {
@@ -177,6 +200,21 @@
     if (!is_mobile) {
       const content = document.getElementById('content');
       content.setAttribute("style", "width:60%; margin: auto;")
+    }
+
+    function search_animal() {
+      let input = document.getElementById('searchbar').value
+      input = input.toLowerCase();
+      let x = document.getElementsByClassName('store');
+
+      for (i = 0; i < x.length; i++) {
+        if (!x[i].dataset.name.toLowerCase().includes(input)) {
+          x[i].style.display = "none";
+        }
+        else {
+          x[i].style.display = "list-item";
+        }
+      }
     }
   </script>
 
