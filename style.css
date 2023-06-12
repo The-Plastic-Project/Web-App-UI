@@ -73,8 +73,12 @@ nav {
 }
 
 nav a {
-  color: black; 
+  color: black!important; 
   font-size: 10pt;
+}
+
+a {
+  color: black!important; 
 }
 
 nav row {
@@ -101,7 +105,8 @@ hide-before-res {
   height: 30%; 
   border-radius: 25px; 
   text-align: center; 
-  width: 60%;
+  width: 70%;
+  margin-bottom: -215px;
 }
 
 #image-bg-div {
@@ -119,43 +124,97 @@ hide-before-res {
   width: 100%;
 }
 
-.shop-col-1 {
-  width: 40%
+#searchbar{
+   margin-left: 0%;
+   padding:15px;
+   border-bottom-left-radius: 20px; 
+   border-top-left-radius: 20px;
+   height: 70px;
+  border-bottom-right-radius: 0px; 
+  border-top-right-radius: 0px;
+ }
+
+#search-btn {
+  height: 70px;
+  width: 100%;
+  border-bottom-right-radius: 20px; 
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  background-color: #7CAA9E
+}
+ 
+input[type=text] {
+  width: 100%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+  
 }
 
-.shop-col-2 {
-  width: 60%
+input[type=text]:focus {
+    outline: none !important;
+    border:2px solid #7CAA9E;
+  }
+ 
+#list{
+  padding: 0px;
+ }
+
+.give-shadow {
+  box-shadow: 0px 4px 10px 0px #888888;
 }
+
+main {
+  margin-left: 1rem; 
+  margin-right: 1rem; 
+  margin-top: 3rem
+}
+
+#install-btn {
+  background-color: #7CAA9E;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  float:left;
+  
+}
+
+#install-bar {
+  background-color: #CCDDDA;
+  height: 65px;
+  visibility: hidden;
+}
+
+#install-close-button {
+  float:right;
+  margin: 10px;
+  background-color: rgba(0,0,0,0);
+  color: black;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+#content {
+    width: 60%;
+    margin: auto;
+  }
 
 @media (max-width: 800px) {
-  .shop-col-1 {
-    width: 60%
-  }
-  
-  .shop-col-2 {
-    width: 40%
+  #content {
+    width: 100%;
+    margin: auto;
   }
 }
 
-#searchbar{
-     margin-left: 0%;
-     padding:15px;
-     border-radius: 10px;
-   }
- 
-   input[type=text] {
-      width: 100%;
-      -webkit-transition: width 0.15s ease-in-out;
-      transition: width 0.15s ease-in-out;
-      
-   }
- 
-   /* When the input field gets focus,
-        change its width to 100% */
-   input[type=text]:focus {
-     width: 100%;
-   }
- 
-  #list{
-    padding: 0px;
-   }
+@media (max-width: 450px) {
+  #content {
+    width: 100%;
+    margin: auto;
+  }
+
+  .hide-when-small {
+    visibility: hidden;
+    height:0;
+  }
+}

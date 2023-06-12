@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>TensorFlow Demo</title>
+  <title>Waste Sorter</title>
   <link rel="stylesheet" href="style.css">
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -54,7 +54,7 @@
       <h1 class="mb-3 fw-bold" style="text-align:center">Classify Waste Using Artifical Intelligence</h1>
       <div class="mb-5 d-flex justify-content-center hide-before-res">
         <div id="picture-div">
-          <div id="image-bg-div">
+          <div id="image-bg-div give-shadow">
             <img id="img" class="img-fluid" src="" style="border-radious:25px" />
           </div>
         </div>
@@ -71,7 +71,7 @@
   <input type="file" (change)="getFile($event)" id="fileInput" name="image" accept="image/*" capture="environment">
 
   <div class="d-flex justify-content-center hide-before-res" id="results-div">
-    <div class="p-3" style="background-color: #faece1; width: 87.2%; border-radius: 25px;" id="results-div">
+    <div class="p-3 give-shadow" style="background-color: #faece1; width: 87.2%; border-radius: 25px;" id="results-div">
       <h3 id="result" role="alert">Identified As: Plastic Bottle</h3>
       <p id="results-detailed" class="text-break" role="alert" style="margin-top: 1rem; visibility: hidden;">
         Recognizing...
@@ -81,7 +81,7 @@
 
 
   <div class="d-flex justify-content-center" id="info-div">
-    <div class="p-3" id="note-div"
+    <div class="p-3 give-shadow" id="note-div"
       style="background-color: #faece1; width: 87.2%; border-radius: 25px; margin-top: 30px; margin-bottom: 30px">
       <h3>A note on usage</h3>
       <p class="text-break">In most cities, garbage is not sorted after it is picked up. Also, just because a
@@ -93,15 +93,9 @@
   </div>
   </div>
 
+  <script src="script.js"></script>
+
   <script>
-
-    var is_mobile = !!navigator.userAgent.match(/iphone|android|blackberry/ig) || false;
-
-    if (!is_mobile) {
-      const content = document.getElementById('content');
-      console.log("RECOGNIZED")
-      content.setAttribute("style", "width:60%; margin: auto;")
-    }
 
     document.getElementById('results-div').style.visibility = 'hidden'
     document.getElementById('picture-div').style.visibility = 'hidden'

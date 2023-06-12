@@ -11,8 +11,8 @@ self.addEventListener('install', event => {
       '/local.html',
       '/AI-demo.html',
       '/manifest.json',
-      '/cafee vita logo.png',
-      '/cofee img.png',
+      '/caffe vita logo.png',
+      '/coffee img.png',
     ]);
   })());
 });
