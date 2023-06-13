@@ -65,34 +65,32 @@
       <h1 class="mb-3 fw-bold" style="text-align:center;">Business of the Day</h1>
 
       <!-- Store  -->
-      <div class="mb-5 d-flex justify-content-center">
-        <div class="p-0 container give-shadow"
-          style="width: 100%; height: 20%; background-color: #faece1; border-radius: 20px; max-width: 100%;">
-          <div class="row">
-            <div style="width:50%">
-              <img class="float-left img-fluid" src="coffee img.png"
-                style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
-            </div>
-            <div style="width:50%">
-              <div class="row mt-2 mb-2" style="padding-right: 20px; padding-top: 10px">
-                <div>
-                  <img class="mx-auto d-block img-fluid" src="caffe vita logo.png" style="border-radius: 30px;">
+          <div class="mb-5 d-flex justify-content-center">
+            <div class="p-0 container give-shadow"
+              style="width: 100%; height: 20%; background-color: #faece1; border-radius: 20px; max-width: 100%;">
+              <div class="row">
+                <div class="col">
+                  <img class="float-left img-fluid w-100 h-100" src="coffee img.png"
+                    style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
                 </div>
-              </div>
-              <div class="row" style="padding-right: 20px;">
-                <p class="text-center">Eco friendly coffee, born in Seattle, Wa. Bluegrass
-                  Havana
-                </p>
-              </div>
-              <div class="row" style="padding-right: 20px;">
-                <p class="text-center fw-bold""><a class=" link" href="https://www.caffevita.com/">Learn
-                  More</a>
-                </p>
+                <div class="col">
+                  <div class="row mt-2 mb-2 hide-when-small" style="padding-right: 20px; padding-top: 10px">
+                    <div>
+                      <img class="mx-auto d-block img-fluid w-100 h-100" src="caffe vita logo.png" style="border-radius: 30px;">
+                    </div>
+                  </div>
+                  <div class="row" style="padding-right: 20px;">
+                    <p class="text-center">Eco friendly coffee, born in Seattle, Wa.</p>
+                  </div>
+                  <div class="row" style="padding-right: 20px;">
+                    <p class="text-center fw-bold""><a href=" https://www.caffevita.com/">Learn
+                      More</a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
 
       <!-- Header -->
@@ -101,7 +99,7 @@
       <!-- Fun Fact Bubble -->
       <div class="mb-5 d-flex justify-content-center">
         <div class="p-3 give-shadow" style="background-color: #CCDDDA; border-radius: 20px;">
-          <p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et
             dolore
             magna aliqua. Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies. Arcu non sodales
@@ -114,8 +112,8 @@
       </div>
 
       <!-- Contact Us Bubble -->
-      <div class="d-flex justify-content-center">
-        <div class="p-3 give-shadow" style="background-color: #faece1; width: 92.3%; border-radius: 20px;">
+      <div class="justify-content-center">
+        <div class="p-3 give-shadow" style="background-color: #faece1; border-radius: 20px;">
           <div class="containter">
             <div class="row">
               <div class="col">
@@ -150,16 +148,16 @@
 
   <script>
 
-  
+
     function show_install() {
       document.getElementById('install-bar').style.visibility = "visible";
     }
-    
-    
+
+
     function hide_install() {
       document.getElementById('install-bar').style.visibility = "hidden";
     }
-    
+
     // Initialize deferredPrompt for use later to show browser install prompt.
     let deferredPrompt;
 
