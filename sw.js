@@ -1,8 +1,10 @@
-const CACHE_NAME = `plastic-project-app-v1`;
+const CACHE_NAME = `plastic-project-app-dev`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
+    console.log("installing")
+    console.log(CACHE_NAME)
     const cache = await caches.open(CACHE_NAME);
     cache.addAll([
       '/',
@@ -10,9 +12,13 @@ self.addEventListener('install', event => {
       '/index.html',
       '/local.html',
       '/AI-demo.html',
+      'script.js',
       '/manifest.json',
       '/caffe vita logo.png',
       '/coffee img.png',
+      '/script.js',
+      '/home-page.js',
+      '/AI-backend.js'
     ]);
   })());
 });
