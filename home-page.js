@@ -59,7 +59,6 @@ buttonInstall.addEventListener('click', async () => {
   }
 
   const fact = await getFunFact();
-  console.log(fact);
   document.getElementById('fun-fact').textContent = fact;
 })();
 

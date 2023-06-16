@@ -96,7 +96,8 @@ hide-before-res {
 #upload-btn {
   height: 100px;
   width: 230px;
-  margin-top: 60px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   background-color: #CCDDDA; 
   border-radius: 9px;
   font-size: 15pt;
@@ -107,7 +108,7 @@ hide-before-res {
   border-radius: 25px; 
   text-align: center; 
   width: 70%;
-  margin-bottom: -215px;
+  margin-bottom: -50px;
 }
 
 #image-bg-div {
@@ -201,10 +202,26 @@ main {
     margin: auto;
   }
 
+
+footer {
+  position: auto;
+  width: 70%;
+  margin: auto
+}
+
 @media (max-width: 800px) {
   #content {
     width: 100%;
     margin: auto;
+  }
+  
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 100px;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
   }
 }
 
@@ -220,4 +237,9 @@ main {
     padding:0;
     margin:0;
   }
+}
+
+footer p {
+  color: darkgrey;
+  font-size: 13px;
 }

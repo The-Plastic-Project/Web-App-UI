@@ -63,32 +63,41 @@
         <div class="row"">
           <div class=" col d-flex justify-content-center">
           <button class="btn" id="upload-btn" onclick="HandleBrowseClick()" ;>Upload Image</button>
-
         </div>
       </div>
   </div>
 
   <input type="file" (change)="getFile($event)" id="fileInput" name="image" accept="image/*" capture="environment">
 
-  <div class="d-flex justify-content-center hide-before-res" id="results-div">
-    <div class="p-3 give-shadow" style="background-color: #faece1; width: 87.2%; border-radius: 25px;" id="results-div">
-      <h3 id="result" role="alert">Identified As: Plastic Bottle</h3>
-      <p id="results-detailed" class="text-break" role="alert" style="margin-top: 1rem; visibility: hidden;">
-        Recognizing...
-      </p>
+  <footer id="ai-warning">
+    <hr>
+    <p>Important notice: The Plastic Project will download a copy of your image to improve the model. The model may
+      predict incorrectly, so if you have doubts on your classification, please put the item where ever you see best fit
+      or put in the trash if you are unsure.</p>
+  </footer>
+
+
+  <div id="ai-content">
+    <div class="d-flex justify-content-center hide-before-res" id="results-div">
+      <div class="p-3 give-shadow" style="background-color: #faece1;  border-radius: 25px;" id="results-div">
+        <h3 id="result" role="alert">Identified As: Plastic Bottle</h3>
+        <p id="results-detailed" class="text-break" role="alert" style="margin-top: 1rem; visibility: hidden;">
+          Recognizing...
+        </p>
+      </div>
     </div>
-  </div>
 
 
-  <div class="d-flex justify-content-center" id="info-div">
-    <div class="p-3 give-shadow" id="note-div"
-      style="background-color: #faece1; width: 87.2%; border-radius: 25px; margin-top: 30px; margin-bottom: 30px">
-      <h3>A note on usage</h3>
-      <p class="text-break">In most cities, garbage is not sorted after it is picked up. Also, just because a
-        product
-        has a recycle symbol does NOT mean that it can always be recycled. Be sure to clean waste that goes into the
-        recycling. Most rules here apply in all cities, but sometimes more metal products can be recycled, so
-        check the conditions for your city.</p>
+    <div class="d-flex justify-content-center" id="info-div">
+      <div class="p-3 give-shadow" id="note-div"
+        style="background-color: #faece1; border-radius: 25px; margin-top: 30px; margin-bottom: 30px">
+        <h3>A note on usage</h3>
+        <p class="text-break">In most cities, garbage is not sorted after it is picked up. Also, just because a
+          product
+          has a recycle symbol does NOT mean that it can always be recycled. Be sure to clean waste that goes into the
+          recycling. Most rules here apply in all cities, but sometimes more metal products can be recycled, so
+          check the conditions for your city.</p>
+      </div>
     </div>
   </div>
   </div>

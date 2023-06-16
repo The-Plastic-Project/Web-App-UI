@@ -1,7 +1,5 @@
+document.getElementById('ai-content').style.display = 'none'
 
-document.getElementById('results-div').style.visibility = 'hidden'
-document.getElementById('picture-div').style.visibility = 'hidden'
-document.getElementById('note-div').style.visibility = 'hidden'
 
 
 // handle click
@@ -15,10 +13,10 @@ const img = document.getElementById('img');
 const result = document.getElementById('result');
 const results_detailed = document.getElementById('results-detailed');
 document.getElementById('fileInput').addEventListener("change", e => {
-  document.getElementById('results-div').style.visibility = 'visible'
-  document.getElementById('picture-div').style.visibility = 'visible'
-  document.getElementById('note-div').style.visibility = 'visible'
-  document.getElementById('upload-btn').style.visibility = 'hidden'
+  document.getElementById('ai-content').style.display = 'block'
+  document.getElementById('upload-btn').style.display = 'none'
+  document.getElementById('ai-warning').style.display = 'none'
+  document.getElementById('info-div').style.height = 'auto'
   result.style.visibility = 'visible';
   result.textContent = 'Recognizing...';
   results_detailed.style.visibility = 'visible';

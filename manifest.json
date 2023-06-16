@@ -1,17 +1,17 @@
 {
     "lang": "en-us",
     "name": "The Plastic Project Web App",
-    "short_name": "The Plastic Project",
+    "short_name": "Plastic Project",
     "description": "A tool to classify waste and learn about local eco-friendly opportunities",
     "start_url": "/",
     "background_color": "#7caa9e",
-    "theme_color": "#faece1",
+    "theme_color": "FFFFFF",
     "orientation": "any",
     "display": "standalone",
     "icons": [
         {
-            "src": "/logo-v2-transparent.png",
-            "sizes": "1042x1042"
+          "src": "/logo-white-bg.png",
+          "sizes": "1042x1042"
         }
     ]
 }
