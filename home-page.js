@@ -39,28 +39,28 @@ buttonInstall.addEventListener('click', async () => {
 });
 
 
-// GETTING FUN FACT FROM SERVER
+// // GETTING FUN FACT FROM SERVER
 
 
-(async function() {
-  async function getFunFact() {
-    const url = 'https://6scmtwnqed.execute-api.us-west-1.amazonaws.com/dev';
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer',
-      body: JSON.stringify({ "fact": "true" })
-    });
-    let res = await response.json();
-    return JSON.parse(res.body);
-  }
+// (async function() {
+//   async function getFunFact() {
+//     const url = 'https://6scmtwnqed.execute-api.us-west-1.amazonaws.com/dev';
+//     const response = await fetch(url, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       redirect: 'follow',
+//       referrerPolicy: 'no-referrer',
+//       body: JSON.stringify({ "fact": "true" })
+//     });
+//     let res = await response.json();
+//     return JSON.parse(res.body);
+//   }
 
-  const fact = await getFunFact();
-  document.getElementById('fun-fact').textContent = fact;
-})();
+//   const fact = await getFunFact();
+//   document.getElementById('fun-fact').textContent = fact;
+// })();
 
 
 

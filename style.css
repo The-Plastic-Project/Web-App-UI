@@ -5,9 +5,10 @@ html {
   /* Colors, reference with var(--...) */
 
   /* Figma */
-  --cream: #FAECE1;
-  --green1: #CCDDDA;
-  --green2: #7CAA9E;
+  /* --cream: #FAECE1; */
+  --cream:  #fcf3ec;
+  --green1: #DEE8E8;
+  --green2: #b3cfc8;
   
   /* branded */
   --TPP-orange: #FF8221;
@@ -67,7 +68,7 @@ input[type=file] {
 }
 
 nav {
-  background-color: #FAECE1;
+  background-color: var(--cream);
   height: 12%;
   text-align: center;
   border-top: 1px solid black;
@@ -75,7 +76,7 @@ nav {
 
 nav a {
   color: black!important; 
-  font-size: 10pt;
+  font-size: 9pt;
 }
 
 a {
@@ -94,11 +95,21 @@ hide-before-res {
 }
 
 #upload-btn {
-  height: 100px;
+  height: 80px;
   width: 230px;
-  margin-top: 50px;
+  margin-top: 1 0px;
   margin-bottom: 50px;
-  background-color: #CCDDDA; 
+  background-color:  #b3cfc8;
+  border-radius: 9px;
+  font-size: 15pt;
+}
+
+#add-file-btn {
+  height: 80px;
+  width: 230px;
+  margin-top: 1 0px;
+  margin-bottom: 50px;
+  background-color: #b3cfc8;
   border-radius: 9px;
   font-size: 15pt;
 }
@@ -114,7 +125,7 @@ hide-before-res {
 #image-bg-div {
   margin-bottom: -200px;
   margin-top: 5%;
-  background-color: #faece1;
+  background-color: var(--cream);
   border-radius: 25px;
   padding: 15px;
   width: 100%;
@@ -143,7 +154,7 @@ hide-before-res {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
-  background-color: #7CAA9E
+  background-color:  #428c79;
 }
  
 input[type=text] {
@@ -155,7 +166,7 @@ input[type=text] {
 
 input[type=text]:focus {
     outline: none !important;
-    border:2px solid #7CAA9E;
+    border:2px solid var(--green2)
   }
  
 #list{
@@ -163,7 +174,7 @@ input[type=text]:focus {
  }
 
 .give-shadow {
-  box-shadow: 0px 4px 10px 0px #888888;
+  box-shadow: 0px 4px 15px 0px #888888;
 }
 
 main {
@@ -173,7 +184,7 @@ main {
 }
 
 #install-btn {
-  background-color: #7CAA9E;
+  background-color: var(--green2);
   border-radius: 20px;
   padding: 10px;
   margin: 10px;
@@ -182,7 +193,7 @@ main {
 }
 
 #install-bar {
-  background-color: #CCDDDA;
+  background-color: var(--green1);
   height: 65px;
   visibility: hidden;
 }
@@ -221,7 +232,8 @@ footer {
     bottom: 100px;
     width: 100%;
     margin: auto;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -241,5 +253,5 @@ footer {
 
 footer p {
   color: darkgrey;
-  font-size: 13px;
+  font-size: 11px;
 }
