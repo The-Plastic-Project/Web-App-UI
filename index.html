@@ -61,8 +61,6 @@
   <main>
     <div id="content">
 
-      <h5 class="mb-3 fw-bold" id="datePlaceholder"></h5>
-
       <!-- Header -->
       <h1 class="mb-3 fw-bold">Welcome to the Plastic Project Mobile App!</h1>
 
@@ -75,7 +73,7 @@
 
       <!-- AI highlight bubble -->
       <div class="mb-4 d-flex justify-content-center">
-        <div class="give-shadow" style="border-radius: 40px">
+        <div class="give-shadow" style="border-radius: 30px">
           <div></div>
           <div class="row">
             <img class="mx-auto d-block img-fluid w-100 h-100" src="waste-pic-cropped.png"
@@ -84,15 +82,42 @@
           <div class="row"
             style="background-color: var(--cream); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; padding: 10px; margin:0">
 
-            <div style="float: left; width: 65%; margin-top: 0.3rem">
-            <h5>Dispose right</h5>
-            <p>Most people dispose of waste improperly</p>
+            <div class="col-8" style="margin-top: 0.3rem">
+              <h5>Dispose right</h5>
+              <p>Most people dispose of waste wrong. Use our AI tool to do it right.</p>
             </div>
 
-            <div style="float: left; width: 35%; margin: auto;">
-            <button style="background-color: #428c79; border-radius: 10px;">Try our AI tool</button>
+            <div class="col-4 style=" style="margin-top: auto; margin-bottom: auto; margin-left:0; margin-right:0">
+              <a href="/AI-demo.html">
+                <button style="background-color: #428c79; border-radius: 10px;">Try now</button>
+              </a>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Random thing -->
+      <div class="mb-4 d-flex justify-content-center">
+        <div class="p-3 give-shadow" style="background-color: var(--green1); width: 100%; border-radius: 20px;">
+          <div class="containter">
+            <div class="row">
+              <div class="col-4 d-flex align-items-center justify-content-center">
+                <a class="nav-link"
+                  href="https://education.nationalgeographic.org/resource/whopping-91-percent-plastic-isnt-recycled/"
+                  style="text-decoration: none;">
+                  <div class="p-3 d-flex align-items-center justify-content-center"
+                    style="background-color: #428c79; border-radius: 20px;">
+                    <iconify-icon icon="fa6-solid:square-arrow-up-right" height="45" style="color: white;">
+                    </iconify-icon>
+                  </div>
+                </a>
+              </div>
+              <div class="col-7 d-flex align-items-center">
+                <p style="margin-bottom: 0px;">91% of plastic is not recycled. Learn more about why.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -108,8 +133,9 @@
             style="background-color: var(--cream); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; padding: 10px; margin:0">
 
             <div style="margin-top: 0.3rem">
-            <h5>Weekly fun fact</h5>
-            <p>By 2050, unless significant action is taken to reduce plastic pollution, virtually every seabird species on the planet will be eating plastic regularly.</p>
+              <h5>Weekly fun fact</h5>
+              <p>By 2050, unless significant action is taken to reduce plastic pollution, virtually every seabird
+                species on the planet will be eating plastic regularly.</p>
             </div>
           </div>
         </div>
@@ -127,14 +153,14 @@
           style="width: 100%; height: 20%; background-color: var(--cream); border-radius: 20px; max-width: 100%;">
           <div class="row">
             <div class="col">
-              <img class="float-left img-fluid w-100 h-100" src="coffee img.png"
+              <img class="float-left img-fluid w-100 h-100" src="shop-imgs/caffe-vita-bg.jpg"
                 style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
             </div>
             <div class="col">
-              <div class="row mt-2 mb-2 hide-when-small" style="padding-right: 20px; padding-top: 10px">
+              <div class="row mt-2 mb-2 hide-when-small" style="padding-right: 20px">
                 <div>
-                  <img class="mx-auto d-block img-fluid w-100 h-100" src="caffe vita logo.png"
-                    style="border-radius: 30px;">
+                  <img class="mx-auto d-block img-fluid" src="shop-imgs/caffe-vita-logo.png"
+                    style="border-radius: 30px;width:85%">
                 </div>
               </div>
               <div class="row" style="padding-right: 20px;">
@@ -157,20 +183,21 @@
           style="width: 100%; height: 20%; background-color: var(--cream); border-radius: 20px; max-width: 100%;">
           <div class="row">
             <div class="col">
-              <img class="float-left img-fluid w-100 h-100" src="cactus-bg.jpg"
+              <img class="float-left img-fluid w-100 h-100" src="shop-imgs/cactus-bg.jpg"
                 style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
             </div>
             <div class="col">
-              <div class="row mt-2 mb-2 hide-when-small" style="padding-right: 20px; padding-top: 10px">
+              <div class="row mt-2 mb-2 hide-when-small" style="padding-right: 20px">
                 <div>
-                  <img class="mx-auto d-block img-fluid w-100 h-100" src="cactus-logo.png" style="border-radius: 30px;">
+                  <img class="mx-auto d-block img-fluid" src="shop-imgs/cactus-logo.png"
+                    style="border-radius: 30px;width:88%">
                 </div>
               </div>
               <div class="row" style="padding-right: 20px;">
-                <p class="text-center">Sustainable Mexican cuisine, popular on the Eastside.</p>
+                <p class="text-center">Sustainable, local Mexican cuisine.</p>
               </div>
               <div class="row" style="padding-right: 20px;">
-                <p class="text-center fw-bold""><a href=" https://www.caffevita.com/">Learn
+                <p class="text-center fw-bold""><a href=" https://www.cactusrestaurants.com/">Learn
                   More</a>
                 </p>
               </div>
@@ -186,21 +213,21 @@
           style="width: 100%; height: 20%; background-color: var(--cream); border-radius: 20px; max-width: 100%;">
           <div class="row">
             <div class="col">
-              <img class="float-left img-fluid w-100 h-100" src="coffee img.png"
+              <img class="float-left img-fluid w-100 h-100" src="shop-imgs/broadfork-bg.jpg"
                 style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
             </div>
             <div class="col">
-              <div class="row mt-2 mb-2 hide-when-small" style="padding-right: 20px; padding-top: 10px">
+              <div class="row mt-2 mb-2 hide-when-small" style="padding-right: 20px">
                 <div>
-                  <img class="mx-auto d-block img-fluid w-100 h-100" src="caffe vita logo.png"
-                    style="border-radius: 30px;">
+                  <img class="mx-auto d-block img-fluid" src="shop-imgs/broadfork-logo.jpg"
+                    style="border-radius: 30px;style=" width:85%"">
                 </div>
               </div>
               <div class="row" style="padding-right: 20px;">
-                <p class="text-center">Eco friendly coffee, born in Seattle, Wa.</p>
+                <p class="text-center">Vegan, farm-to-table restraunt.</p>
               </div>
               <div class="row" style="padding-right: 20px;">
-                <p class="text-center fw-bold""><a href=" https://www.caffevita.com/">Learn
+                <p class="text-center fw-bold""><a href=" https://broadforkcafe.com/">Learn
                   More</a>
                 </p>
               </div>
@@ -215,21 +242,21 @@
           style="width: 100%; height: 20%; background-color: var(--cream); border-radius: 20px; max-width: 100%;">
           <div class="row">
             <div class="col">
-              <img class="float-left img-fluid w-100 h-100" src="coffee img.png"
+              <img class="float-left img-fluid w-100 h-100" src="shop-imgs/alchemy-goods.jpeg"
                 style="border-bottom-left-radius: 20px; border-top-left-radius: 20px;">
             </div>
             <div class="col">
-              <div class="row mt-2 mb-2 hide-when-small" style="padding-right: 20px; padding-top: 10px">
+              <div class="row mt-2 mb-2 hide-when-small" style="padding-right: 20px">
                 <div>
-                  <img class="mx-auto d-block img-fluid w-100 h-100" src="caffe vita logo.png"
-                    style="border-radius: 30px;">
+                  <img class="mx-auto d-block img-fluid w-70 h-70" src="shop-imgs/alchemy-goods-logo.png"
+                    style="width:70%">
                 </div>
               </div>
               <div class="row" style="padding-right: 20px;">
-                <p class="text-center">Eco friendly coffee, born in Seattle, Wa.</p>
+                <p class="text-center">Shop eco-friendly bags and wallets.</p>
               </div>
               <div class="row" style="padding-right: 20px;">
-                <p class="text-center fw-bold""><a href=" https://www.caffevita.com/">Learn
+                <p class="text-center fw-bold""><a href=" https://www.alchemygoods.com/">Learn
                   More</a>
                 </p>
               </div>
@@ -238,48 +265,28 @@
         </div>
       </div>
 
-      <!-- See more Bubble -->
-      <div class="mb-4 d-flex justify-content-center">
-        <div class="p-3 give-shadow" style="background-color: var(--green1); width: 100%; border-radius: 20px;">
-          <div class="containter">
-            <div class="row">
-              <div class="col-6 d-flex align-items-center">
-                <p style="margin-bottom: 0px;">Want to discover more eco-friendly businesses?</p>
-              </div>
-              <div class="col d-flex align-items-center justify-content-center">
-                <a class="card-link" href="https://www.google.com/forms/about/" style="text-decoration: none;">
-                  <div class="p-3 d-flex align-items-center justify-content-center"
-                    style="background-color: #428c79; border-radius: 20px;">
-                    <p class="fw-bold" style=" margin-bottom: 0px; color:white; text-decoration: none;">See shop page</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-    <br>
-    <hr>
+      <br>
+      <hr>
       <!-- Header -->
       <h2 class="mb-3 fw-bold">Feedback</h2>
-            <!-- See more Bubble -->
+
       <div class="mb-4 d-flex justify-content-center">
         <div class="p-3 give-shadow" style="background-color: var(--green1); width: 100%; border-radius: 20px;">
           <div class="containter">
             <div class="row">
-              <div class="col-6 d-flex align-items-center">
-                <p style="margin-bottom: 0px;">We greatly value your feedback in improving our app.</p>
-              </div>
-              <div class="col d-flex align-items-center justify-content-center">
-                <a class="card-link" href="https://www.google.com/forms/about/" style="text-decoration: none; text-align:center">
+              <div class="col-4 d-flex align-items-center justify-content-center">
+                <a class="nav-link"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfpeREqV6sVxms8llHZ5kCWuP3AswPxHpF2tFnFplzJYIjZzw/viewform"
+                  style="text-decoration: none;">
                   <div class="p-3 d-flex align-items-center justify-content-center"
                     style="background-color: #428c79; border-radius: 20px;">
-                    <p class="fw-bold" style=" margin-bottom: 0px; color:white; text-decoration: none;">Share your experience</p>
+                    <iconify-icon icon="fa6-solid:square-arrow-up-right" height="45" style="color: white;">
+                    </iconify-icon>
                   </div>
                 </a>
+              </div>
+              <div class="col-7 d-flex align-items-center">
+                <p style="margin-bottom: 0px;">We value your feedback. Please share your experience with us.</p>
               </div>
             </div>
           </div>
