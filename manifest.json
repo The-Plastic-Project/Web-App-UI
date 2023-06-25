@@ -9,8 +9,9 @@
     "display": "standalone",
     "icons": [
         {
-          "src": "/logo-white-bg.png",
-          "sizes": "1042x1042"
+          "src": "logo-white-bg.png",
+          "sizes": "1024x1024",
+          "type": "image/png"
         }
     ]
 }
