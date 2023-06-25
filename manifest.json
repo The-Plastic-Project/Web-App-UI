@@ -4,7 +4,8 @@
     "short_name": "Plastic Project",
     "description": "A tool to classify waste and learn about local eco-friendly opportunities",
     "start_url": "/",
-    "background_color": "#7caa9e",
+    "background_color": "white",
+    "theme_color": "white",
     "orientation": "portrait",
     "display": "standalone",
     "icons": [
