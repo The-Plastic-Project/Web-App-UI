@@ -41,7 +41,7 @@
         <div class="col">
           <iconify-icon icon="mdi:shop-outline" height="36" style="color: black;"></iconify-icon>
           <div class="row justify-content-center">
-            Explore
+            Shop Green
           </div>
         </div>
       </div>
@@ -88,7 +88,8 @@
 
   <div id="ai-content">
     <div class="d-flex justify-content-center hide-before-res mb-4" id="results-div">
-      <div class="p-3 give-shadow" style="background-color: var(--cream);  border-radius: 25px;" id="results-div">
+      <div class="p-3 give-shadow" style="background-color: var(--cream);  border-radius: 25px; width:100%"
+        id="results-div">
         <h3 id="result" role="alert">Identified As: Plastic Bottle</h3>
         <p id="results-detailed" class="text-break" role="alert" style="margin-top: 1rem; visibility: hidden;">
           Recognizing...
@@ -123,6 +124,29 @@
     </div>
 
 
+    <!-- AI tips bubble -->
+    <div class="mb-4 d-flex justify-content-center" id="info-div">
+      <div class="give-shadow" style="border-radius: 30px" id="note-div">
+        <div></div>
+        <div class="row">
+          <img class="mx-auto d-block img-fluid w-100 h-100" src="ai-tips.webp"
+            style="border-top-left-radius: 30px; border-top-right-radius: 30px;">
+        </div>
+        <div class="row"
+          style="background-color: var(--cream); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; padding: 10px; margin:0">
+
+          <div style="margin-top: 0.3rem">
+            <h5>Getting incorrect predictions?</h5>
+            <p class="text-break">Make sure your object is clearly visible and sufficiently large in the center of the
+              image. Lighter colored and less cluttered backgrounds are preferred. If you're focusing on a metal can or
+              plastic
+              bottle, try to include some of the cap/lid for better result.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- Note on usage bubble -->
     <div class="mb-4 d-flex justify-content-center" id="info-div">
       <div class="give-shadow" style="border-radius: 30px" id="note-div">
@@ -136,16 +160,16 @@
 
           <div style="margin-top: 0.3rem">
             <h5>A note on usage</h5>
-            <p class="text-break">In most cities, garbage is not sorted after it is picked up. Also, just because a
-              product
-              has a recycle symbol does NOT mean that it can always be recycled. Be sure to clean waste that goes into
-              the
-              recycling. Most rules here apply in all cities, but sometimes more metal products can be recycled, so
-              check the conditions for your city.</p>
+            <p class="text-break">Just because a product has a recycle symbol does NOT mean that it can always be
+              recycled. Be sure to clean waste that goes into the
+              recycling.</p>
+            <p>This app uses Kirkland's recycling guidelines. Most rules here apply in all cities, but there might be
+              some modifications depending on where you live.</p>
           </div>
         </div>
       </div>
     </div>
+
   </div>
   </div>
 

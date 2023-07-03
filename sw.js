@@ -1,4 +1,4 @@
-const CACHE_NAME = `plastic-project-app-launch`;
+const CACHE_NAME = `plastic-project-app-v0`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
@@ -42,6 +42,7 @@ self.addEventListener('install', event => {
       '/shop-imgs/zoka-coffee-logo.jpg',
       '/AI-backend.js',
       '/AI-demo.html',
+      '/ai-tips.webp',
       "/fun-ai-pic.jpg",
       "fun-fact-img.jpg",
       "home-page.js",
