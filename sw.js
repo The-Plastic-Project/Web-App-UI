@@ -1,4 +1,4 @@
-const CACHE_NAME = `plastic-project-app-v0`;
+const CACHE_NAME = `plastic-project-app-proposal`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
